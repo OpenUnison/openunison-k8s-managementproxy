@@ -1,0 +1,21 @@
+<!-- An anonymous authentication chain MUST be level 0 -->
+<chain name="oauth2jwt" level="20" >
+  <authMech>
+    <name>oauth2jwt</name>
+    <required>required</required>
+    <params>
+      <param name="issuer" value="#[ISSUER_URL]"/>
+      <param name="fromWellKnown" value="#[FROM_WELL_KNOWN:true]"/>
+      <param name="validationKey" value="#[ISSUER_CERTIFICATE_ALIAS]"/>
+      <param name="linkToDirectory" value="false"/>
+      <param name="noMatchOU" value="oauth2"/>
+      <param name="uidAttr" value="sub"/>
+      <param name="lookupFilter" value="(sub=${sub})"/>
+      <param name="userLookupClassName" value="inetOrgPerson"/>
+      <param name="defaultObjectClass" value="inetOrgPerson"/>
+      <param name="realm" value="kubernetes" />>
+      <param name="scope" value="auth" />
+      <param name="audience" value="kubernetes" />
+    </params>
+  </authMech>
+</chain>

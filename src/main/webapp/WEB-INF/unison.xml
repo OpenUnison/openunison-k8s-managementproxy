@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tremoloConfig xmlns="http://www.tremolosecurity.com/tremoloConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tremolosecurity.com/tremoloConfig tremoloConfig.xsd">
+  <applications openSessionCookieName="openSession" openSessionTimeout="1" openSessionSecure="true" openSessionHttpOnly="true">
+    @[dir:applications]
+  </applications>
+  <myvdConfig>WEB-INF/myvd.conf</myvdConfig>
+  <authMechs>
+    @[dir:auth_mechs]
+  </authMechs>
+  <authChains>
+    @[dir:auth_chains]
+  </authChains>
+  <resultGroups>
+    @[dir:result_groups]
+  </resultGroups>
+  <keyStorePath>/etc/openunison/unisonKeyStore.p12</keyStorePath>
+  <keyStorePassword>#[unisonKeystorePassword]</keyStorePassword>
+  <provisioning>
+    <targets>
+      @[dir:targets]
+    </targets>
+    <workflows>
+      @[dir:workflows]
+    </workflows>
+    
+    <org name="Kubernetes Enterprise" description="Kubernetes enterprise deployment" uuid="B158BD40-0C1B-11E3-8FFD-0800200C9A66">
+      
+            
+            <azRules/>
+        </org>
+        <queueConfig isUseInternalQueue="true" maxProducers="1" connectionFactory="org.apache.activemq.ActiveMQSslConnectionFactory" maxConsumers="1" multiTaskQueues="false" numQueues="1" taskQueueName="openunisuron-tasks" smtpQueueName="openunison-smtp" encryptionKeyName="session-unison">
+           
+        </queueConfig>
+        <portal>
+            
+        </portal>
+        <scheduler useDB="false" threadCount="3" instanceLabel="local" instanceIPMask="127.0.0.1">
+        </scheduler>
+        <listeners>
+          
+        </listeners>
+        <reports>
+            
+        </reports>
+
+
+  </provisioning>
+  </tremoloConfig>
