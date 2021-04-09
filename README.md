@@ -92,7 +92,6 @@ Copy `values.yaml` (https://github.com/OpenUnison/helm-charts/blob/master/openun
 | cert_template.st | The `ST` attribute for the forward facing certificate |
 | cert_template.c | The `C` attribute for the forward facing certificate |
 | certs.use_k8s_cm  | Tells the deployment system if you should use k8s' built in certificate manager.  If your distribution doesn't support this (such as Canonical and Rancher), set this to false |
-
 | image | The name of the image to use |
 | monitoring.prometheus_service_account | The prometheus service account to authorize access to the /monitoring endpoint |
 | network_policies.enabled | If `true`, the chart will generate `NetworkPolicy` objects that limit access to the OpenUnison pods.  This is a good option to enable to minimize the services in your cluster that can access the OpenUnison pods and their `ServiceAccount` tokens.
