@@ -105,7 +105,7 @@ Additionally, you can add your Orchestra Portal's TLS base64 encoded PEM certifi
 
 Finally, run the helm chart:
 
-`helm install management-proxy tremolo/openunison-k8s-management --namespace ou-mgmt-proxy -f /path/to/values.yaml`
+`helm install management-proxy tremolo/openunison-k8s-managementproxy --namespace ou-mgmt-proxy -f /path/to/values.yaml`
 
 ## Using The Management Proxy From Your Pipeline
 
